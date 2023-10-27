@@ -30,7 +30,7 @@
                 <a href="{{ route('contact') }}"
                     class="nav-item nav-link {{ $page == 'contact' ? 'active' : '' }}">Contact</a>
             </div>
-            <div class="d-flex m-3 me-0">
+            <div class="d-flex m-3 me-0 align-items-center">
                 <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4"
                     data-bs-toggle="modal" data-bs-target="#searchModal"><i
                         class="fas fa-search text-primary"></i></button>
@@ -45,17 +45,24 @@
                         aria-expanded="false">
                         @if (Auth::check())
                             <style>
+                                .border-avatar{
+                                    border:3px solid #81c408;
+                                }
                                 .dropdown-user {
                                     right: 20% !important;
                                 }
-                                .show>.btn-primary{
-                                    background-color:rgb(231, 118, 118);;
+                                .show>.border-avatar{
+                                    border-color:rgb(231, 118, 118);;
                                 }
                                 .rounded-100{
                                     border-radius: 100px !important;
                                 }
+                                .avatar{
+                                    width:40px;
+                                    height:40px;   
+                                }
                             </style>
-                            <button class="btn btn-primary text-white rounded-100">{{ Auth::user()->lastName }} {{ Auth::user()->firstName }}</button>
+                            <img src="{{ asset('img/avatar.jpg') }}" class="avatar border-avatar text-white rounded-circle">
                         @else
                             <i class="fas fa-user fa-2x"></i>
                         @endif
