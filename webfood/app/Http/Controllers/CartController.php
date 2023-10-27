@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class CartController extends Controller
 {
@@ -13,11 +14,11 @@ class CartController extends Controller
     public function index()
     {
         //
-        $cart = Cart::select()->where("idUser", auth()->user()->id)->first();
+       
+        $cart = Cart::select()->where("idUser", auth()->user()->idUser)->first();
         $cart_item=$cart->hasItem->first();
         $cart_item_food=$cart_item->foods->nameFood;
-        dd($cart_item_food);
-        return view("Pages.cart", compact("cart_item_food"));
+        return view("Pages.cart");
     }
 
     /**

@@ -39,6 +39,7 @@ Route::get('/Shop',function(){
 
 
 
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -47,6 +48,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('/carts',CartController::class);
+    Route::get('/Infor',function(){
+        return view('Pages.info_user');
+    })->name('inforUser');
 });
 
 require __DIR__.'/auth.php';
