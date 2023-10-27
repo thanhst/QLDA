@@ -15,9 +15,9 @@ class CartController extends Controller
     {
         //
        
-        $cart = Cart::select()->where("idUser", auth()->user()->idUser)->first();
-        $cart_item=$cart->hasItem->first();
-        $cart_item_food=$cart_item->foods->nameFood;
+        // $cart = Cart::select()->where("idUser", auth()->user()->idUser)->first();
+        // $cart_item=$cart->hasItem->first();
+        // $cart_item_food=$cart_item->foods->nameFood;
         return view("Pages.cart");
     }
 

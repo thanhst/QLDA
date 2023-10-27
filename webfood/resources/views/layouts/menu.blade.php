@@ -45,19 +45,22 @@
                         aria-expanded="false">
                         @if (Auth::check())
                             <style>
-                                .dropdown-menu {
+                                .dropdown-user {
                                     right: 20% !important;
                                 }
                                 .show>.btn-primary{
                                     background-color:rgb(231, 118, 118);;
                                 }
+                                .rounded-100{
+                                    border-radius: 100px !important;
+                                }
                             </style>
-                            <button class="btn btn-primary text-white">{{ Auth::user()->lastName }} {{ Auth::user()->firstName }}</button>
+                            <button class="btn btn-primary text-white rounded-100">{{ Auth::user()->lastName }} {{ Auth::user()->firstName }}</button>
                         @else
                             <i class="fas fa-user fa-2x"></i>
                         @endif
                     </a>
-                    <ul class="dropdown-menu ms-auto" aria-labelledby="userDropdown">
+                    <ul class="dropdown-menu ms-auto dropdown-user" aria-labelledby="userDropdown">
                         @if (Auth::check() == false)
                             <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
                             <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
