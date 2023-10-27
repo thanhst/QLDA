@@ -1,6 +1,6 @@
 @php
 $isPages=true;
-$page='error';
+$page='testimonial';
 @endphp
 <x-guest-layout>
     @include('layouts.header')
