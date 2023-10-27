@@ -1,8 +1,8 @@
-@php
-    $isPages = true;
-    $page = 'cart';
-@endphp
 <x-app-layout>
+    @php
+        $isPages = true;
+        $page = 'cart';
+    @endphp
     @include('layouts.header')
     <!-- Navbar End -->
     <!-- Modal Search End -->
@@ -37,12 +37,12 @@
                         <tr>
                             <th scope="row">
                                 <div class="d-flex align-items-center">
-                                    <img src="img/vegetable-item-3.png" class="img-fluid me-5 rounded-circle"
+                                    <img src="img/drink54.jpg" class="img-fluid me-5 rounded-circle"
                                         style="width: 80px; height: 80px;" alt="">
                                 </div>
                             </th>
                             <td>
-                                <p class="mb-0 mt-4">Big Banana</p>
+                                <p class="mb-0 mt-4">Orange juice</p>
                             </td>
                             <td>
                                 <p class="mb-0 mt-4">2.99 $</p>
@@ -76,12 +76,12 @@
                         <tr>
                             <th scope="row">
                                 <div class="d-flex align-items-center">
-                                    <img src="img/vegetable-item-5.jpg" class="img-fluid me-5 rounded-circle"
+                                    <img src="img/comtam54.jpg" class="img-fluid me-5 rounded-circle"
                                         style="width: 80px; height: 80px;" alt="" alt="">
                                 </div>
                             </th>
                             <td>
-                                <p class="mb-0 mt-4">Potatoes</p>
+                                <p class="mb-0 mt-4">Broken rice <br> with pork ribs and sausage</p>
                             </td>
                             <td>
                                 <p class="mb-0 mt-4">2.99 $</p>
@@ -114,12 +114,12 @@
                         <tr>
                             <th scope="row">
                                 <div class="d-flex align-items-center">
-                                    <img src="img/vegetable-item-2.jpg" class="img-fluid me-5 rounded-circle"
+                                    <img src="img/xoi.jpg" class="img-fluid me-5 rounded-circle"
                                         style="width: 80px; height: 80px;" alt="" alt="">
                                 </div>
                             </th>
                             <td>
-                                <p class="mb-0 mt-4">Awesome Brocoli</p>
+                                <p class="mb-0 mt-4">Sticky rice</p>
                             </td>
                             <td>
                                 <p class="mb-0 mt-4">2.99 $</p>
@@ -187,6 +187,7 @@
             </div>
         </div>
     </div>
+    <!-- Cart Page End -->
     <!-- Cart Page End -->
 
 

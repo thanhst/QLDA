@@ -161,6 +161,10 @@
     background: var(--bs-secondary);
     color: var(--bs-primary);
 }
+.dropdown .dropdown-menu button:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-primary);
+}
 
 .navbar .nav-item:hover .dropdown-menu {
     transform: rotateX(0deg);
@@ -492,6 +496,23 @@
 
 .footer .footer-item p.mb-4 {
     line-height: 35px;
+}
+.form-group span{
+    background-color: #81c408;
+}
+.form-group i{
+    color: white;
+}
+.btn-form{
+    color: #fff;
+    background-color: #81c408;
+    border-color: #81c408;
+}
+.dropdown-menu{
+    right: 40% !important;
+}
+a.show{
+    color:rgb(231, 118, 118);
 }
 /*** Footer End ***/
 
