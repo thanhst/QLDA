@@ -12,7 +12,7 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle {{ $isPages==true ? "active":""}}" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                        <a href="{{ route('cart') }}" class="dropdown-item {{ $page=='cart' ? "active":""}}">Cart</a>
+                        <a href="{{ route('carts.index') }}" class="dropdown-item {{ $page=='cart' ? "active":""}}">Cart</a>
                         <a href="{{ route('chackout') }}" class="dropdown-item {{ $page=='chackout' ? "active":""}}">Chackout</a>
                         <a href="{{ route('testimonial') }}" class="dropdown-item {{ $page=='testimonial' ? "active":""}}">Testimonial</a>
                         <a href="{{route('error') }}" class="dropdown-item {{ $page=='error' ? "active":""}}">404 Page</a>
