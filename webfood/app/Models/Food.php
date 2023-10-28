@@ -9,6 +9,7 @@ class Food extends Model
 {
     use HasFactory;
     protected $table="foods";
+    public $timestamps = false;
     protected $primaryKey='idFood';
     public function hasItem(){
         return $this->hasMany(Cart_item::class,"idCart","idCart");

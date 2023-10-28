@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\FoodController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,9 +34,7 @@ Route::get('/testimonial',function(){
 Route::get('/Shop-detail',function(){
     return view('Pages.shop-detail');
 })->name('shop-detail');
-Route::get('/Shop',function(){
-    return view('Pages.shop');
-})->name('shop');
+Route::resource('/Shop',FoodController::class);
 
 
 

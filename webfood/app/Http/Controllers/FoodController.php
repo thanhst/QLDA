@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\food;
+use App\Models\Food;
 use Illuminate\Http\Request;
 
 class FoodController extends Controller
@@ -13,6 +13,9 @@ class FoodController extends Controller
     public function index()
     {
         //
+        $foods=Food::paginate(9);
+        $foods->links('layouts.navigation-shop');
+        return view('Pages.shop',compact('foods'));
     }
 
     /**
