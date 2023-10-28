@@ -9,7 +9,8 @@
         <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
                 <a href="{{ route('home') }}" class="nav-item nav-link {{ $page == 'home' ? 'active' : '' }}">Home</a>
-                <a href="{{ route('shop') }}" class="nav-item nav-link {{ $page == 'shop' ? 'active' : '' }}">Shop</a>
+                <a href="{{ route('Shop.index') }}"
+                    class="nav-item nav-link {{ $page == 'shop' ? 'active' : '' }}">Shop</a>
                 <a href="{{ route('shop-detail') }}"
                     class="nav-item nav-link {{ $page == 'shop-detail' ? 'active' : '' }}">Shop Detail</a>
                 <div class="nav-item dropdown">
@@ -45,24 +46,30 @@
                         aria-expanded="false">
                         @if (Auth::check())
                             <style>
-                                .border-avatar{
-                                    border:3px solid #81c408;
+                                .border-avatar {
+                                    border: 3px solid #81c408;
                                 }
+
                                 .dropdown-user {
                                     right: 20% !important;
                                 }
-                                .show>.border-avatar{
-                                    border-color:rgb(231, 118, 118);;
+
+                                .show>.border-avatar {
+                                    border-color: rgb(231, 118, 118);
+                                    ;
                                 }
-                                .rounded-100{
+
+                                .rounded-100 {
                                     border-radius: 100px !important;
                                 }
-                                .avatar{
-                                    width:40px;
-                                    height:40px;   
+
+                                .avatar {
+                                    width: 40px;
+                                    height: 40px;
                                 }
                             </style>
-                            <img src="{{ asset('img/avatar.jpg') }}" class="avatar border-avatar text-white rounded-circle">
+                            <img src="{{ asset('img/avatar.jpg') }}"
+                                class="avatar border-avatar text-white rounded-circle">
                         @else
                             <i class="fas fa-user fa-2x"></i>
                         @endif
@@ -72,6 +79,7 @@
                             <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
                             <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
                         @else
+                            <li><div disable class="dropdown-item">User : {{ Auth::user()->firstName }} {{ Auth::user()->lastName }}</div></li>
                             <li><a class="dropdown-item" href="{{ route('inforUser') }}">Infomation</a></li>
                             <li><button class="dropdown-item" type="submit"
                                     form="logout">{{ __('Log out') }}</button></li>
